@@ -10,4 +10,5 @@
 #' @importFrom goalie areSameLength assert hasNames isCharacter isFlag
 #'   isHeaderLevel isString
 #' @importFrom knitr asis_output kable opts_knit
+#' @importFrom utils packageName
 NULL
