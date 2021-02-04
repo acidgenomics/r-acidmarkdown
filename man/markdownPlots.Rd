@@ -27,10 +27,19 @@ headers are generated with the \code{markdownHeader} function.
 Updated 2021-02-04.
 }
 \examples{
-loadRemoteData(url = file.path(basejumpTestsURL, "plotlist.rds"))
-names(plotlist)
-markdownPlots(list = plotlist)
+data(airquality, package = "datasets")
+p1 <- hist(airquality$Ozone)
+p2 <- with(airquality, plot(Wind, Ozone))
+list <- (
+    "histogram" = p1,
+    "scatterplot" = p2
+)
+markdownPlots(list = list)
 }
 \seealso{
-\code{cowplot::plot_grid()}.
+\itemize{
+\item Examples taken from:
+https://bookdown.org/rdpeng/exdata/the-base-plotting-system-1.html
+\item \code{cowplot::plot_grid()}.
+}
 }

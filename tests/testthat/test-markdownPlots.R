@@ -1,9 +1,13 @@
+context("markdownPlots")
+
+data(airquality, package = "datasets", envir = environment())
+
 test_that("markdownPlots", {
-    skip_if_not(hasInternet())
-    plotlist <- readRDS(file = file.path("cache", "plotlist.rds"))
-    output <- capture.output()
+    p1 <- hist(airquality[["Ozone"]], plot = FALSE)
+    p2 <- hist(airquality[["Wind"]], plot = FALSE)
+    list <- list("ozone" = p1, "wind" = p2)
     expect_output(
-        object = markdownPlots(list = plotlist),
-        regexp = "## continuous"
+        object = markdownPlots(list = list),
+        regexp = "## ozone"
     )
 })

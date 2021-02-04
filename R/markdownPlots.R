@@ -14,12 +14,18 @@
 #' @return Graphical output of plots.
 #' Separated by Markdown headers.
 #'
-#' @seealso `cowplot::plot_grid()`.
+#' @seealso
+#' - Examples taken from:
+#'   https://bookdown.org/rdpeng/exdata/the-base-plotting-system-1.html
+#' - `cowplot::plot_grid()`.
 #'
 #' @examples
-#' loadRemoteData(url = file.path(basejumpTestsURL, "plotlist.rds"))
-#' names(plotlist)
-#' markdownPlots(list = plotlist)
+#' Base R plotting example.
+#' data(airquality, package = "datasets")
+#' p1 <- hist(airquality[["Ozone"]], plot = FALSE)
+#' p2 <- hist(airquality[["Wind"]], plot = FALSE)
+#' list <- list("ozone" = p1, "wind" = p2)
+#' markdownPlots(list = list)
 markdownPlots <- function(list, headerLevel = 2L) {
     assert(
         is.list(list),
@@ -33,8 +39,7 @@ markdownPlots <- function(list, headerLevel = 2L) {
         FUN = function(name, plot, headerLevel) {
             assert(isString(name))
             markdownHeader(name, level = headerLevel, asis = TRUE)
-            print(plot)
-            plot
+            plot(plot)
         },
         SIMPLIFY = FALSE
     ))
