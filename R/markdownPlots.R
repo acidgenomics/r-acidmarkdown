@@ -20,7 +20,7 @@
 #' - `cowplot::plot_grid()`.
 #'
 #' @examples
-#' Base R plotting example.
+#' ## Base R plotting example.
 #' data(airquality, package = "datasets")
 #' p1 <- hist(airquality[["Ozone"]], plot = FALSE)
 #' p2 <- hist(airquality[["Wind"]], plot = FALSE)

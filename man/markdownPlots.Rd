@@ -27,13 +27,11 @@ headers are generated with the \code{markdownHeader} function.
 Updated 2021-02-04.
 }
 \examples{
+## Base R plotting example.
 data(airquality, package = "datasets")
-p1 <- hist(airquality$Ozone)
-p2 <- with(airquality, plot(Wind, Ozone))
-list <- (
-    "histogram" = p1,
-    "scatterplot" = p2
-)
+p1 <- hist(airquality[["Ozone"]], plot = FALSE)
+p2 <- hist(airquality[["Wind"]], plot = FALSE)
+list <- list("ozone" = p1, "wind" = p2)
 markdownPlots(list = list)
 }
 \seealso{
