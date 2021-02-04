@@ -1,0 +1,32 @@
+Package: AcidMarkdown
+Title: Acid Genomics R Markdown
+Description: Toolkit for extending the functionality of R Markdown.
+Version: 0.1.0
+Date: 2021-02-04
+Authors@R: c(
+    person(
+        "Michael", "Steinbaugh",
+        email = "mike@steinbaugh.com",
+        role = c("aut", "cre"),
+        comment = c(ORCID = "0000-0002-2403-2221")
+    ),
+    person(
+        given = "Acid Genomics",
+        role = c("cph", "fnd")
+    ))
+URL:
+    https://r.acidgenomics.com/packages/acidmarkdown/,
+    https://github.com/acidgenomics/r-acidmarkdown/
+BugReports: https://github.com/acidgenomics/r-acidmarkdown/issues/
+License: GPL-3
+Encoding: UTF-8
+Depends: R (>= 4.0)
+Imports:
+    AcidBase (>= 0.3.5),
+    goalie (>= 0.4.14)
+Suggests:
+    rmarkdown,
+    testthat
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Additional_repositories: https://r.acidgenomics.com
