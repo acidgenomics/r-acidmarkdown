@@ -1,14 +1,10 @@
-## FIXME MOVE TO ACIDMARKDOWN.
-
-
-
 #' Markdown hyperlink
 #'
 #' For use in `asis` blocks only.
 #'
 #' @inherit markdownHeader
 #' @author Rory Kirchner, Michael Steinbaugh
-#' @note Updated 2019-08-19.
+#' @note Updated 2021-02-04.
 #' @export
 #'
 #' @inheritParams AcidRoxygen::params

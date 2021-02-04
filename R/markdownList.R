@@ -50,8 +50,7 @@ markdownList <- function(
         text <- paste0(text, "\n")
         ## Specify that output should be handled as Markdown text.
         text <- structure(text, format = "markdown")
-        requireNamespaces("knitr")
-        text <- knitr::asis_output(text)
+        text <- asis_output(text)
         text
     }
 }

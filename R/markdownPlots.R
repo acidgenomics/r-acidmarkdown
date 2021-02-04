@@ -1,14 +1,10 @@
-## FIXME MOVE TO ACIDMARKDOWN.
-
-
-
 #' Multiple Markdown plots
 #'
 #' Supports using a named `list` containing multiple `ggplot` objects, which
 #' can be used in an R Markdown report, separated by headers. Internally, the
 #' headers are generated with the `markdownHeader` function.
 #'
-#' @note Updated 2019-07-28.
+#' @note Updated 2021-02-04.
 #' @export
 #'
 #' @inheritParams AcidRoxygen::params

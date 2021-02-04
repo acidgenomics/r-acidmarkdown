@@ -1,13 +1,9 @@
-## FIXME MOVE TO ACIDMARKDOWN.
-
-
-
 #' Markdown header
 #'
 #' Generate a Markdown header (levels 1-7) in any R Markdown code block. When
 #' calling inside an `asis` chunk, set `asis = TRUE`.
 #'
-#' @note Updated 2020-07-24.
+#' @note Updated 2021-02-04.
 #' @export
 #'
 #' @inheritParams AcidRoxygen::params
@@ -52,8 +48,7 @@ markdownHeader <- function(
         text <- paste0(text, "\n")
         ## Specify that output should be handled as Markdown text.
         text <- structure(text, format = "markdown")
-        requireNamespaces("knitr")
-        text <- knitr::asis_output(text)
+        text <- asis_output(text)
         text
     }
 }
