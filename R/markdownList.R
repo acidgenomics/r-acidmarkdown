@@ -1,7 +1,3 @@
-## FIXME MOVE TO ACIDMARKDOWN.
-
-
-
 #' Markdown list
 #'
 #' Include a Markdown-formatted list, either ordered or unordered. This function
