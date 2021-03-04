@@ -27,9 +27,9 @@ knitr::opts_chunk[["set"]](
 
 ## Set default ggplot2 theme.
 requireNamespace(package = "ggplot2")
-requireNamespace(package = "acidplots")
+requireNamespace(package = "AcidPlots")
 ggplot2::theme_set(
-    acidplots::acid_theme_light(
+    AcidPlots::acid_theme_light(
         base_size = 14L,
         legend_position = "right"
     )
