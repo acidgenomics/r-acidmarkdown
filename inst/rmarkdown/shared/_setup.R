@@ -1,3 +1,18 @@
+## Acid Genomics shared R setup script.
+## Last updated 2021-03-04.
+##
+## This file is defined inside the AcidMarkdown package:
+## > system.file(
+## >     "rmarkdown",
+## >     "shared",
+## >     "_setup.R",
+## >     package = "AcidMarkdown"
+## > )
+##
+## If you encounter any problems with this configuration or have suggestions
+## for improvement, please file an issue here:
+## https://github.com/acidgenomics/r-acidmarkdown/issues
+
 ## Set seed for reproducibility. Using Fibonacci sequence.
 set.seed(1123581321L)
 
