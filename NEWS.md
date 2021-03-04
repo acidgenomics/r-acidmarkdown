@@ -4,6 +4,8 @@
 
 - Fixed typo in `_setup.R` file, which should be "AcidPlots" instead of
   "acidplots".
+- Added AcidPlots and ggplot2 as suggested packages, since they are used
+  in the `prepareTemplate` return inside `_setup.R`.
 
 ## AcidMarkdown 0.1.0 (2021-02-04)
 
