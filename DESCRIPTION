@@ -27,9 +27,7 @@ Imports:
     stringr,
     utils
 Suggests:
-    AcidPlots,
     datasets,
-    ggplot2,
     rmarkdown,
     testthat
 Roxygen: list(markdown = TRUE)
