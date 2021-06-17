@@ -7,16 +7,14 @@ test_that("markdownList", {
         class(md),
         "knit_asis"
     )
-    md <- markdownList(groceries) %>%
-        as.character()
+    md <- markdownList(groceries)
     expect_identical(
-        md,
+        as.character(md),
         c("- milk\n", "- eggs\n")
     )
-    md <- markdownList(groceries, ordered = TRUE) %>%
-        as.character()
+    md <- markdownList(groceries, ordered = TRUE)
     expect_identical(
-        md,
+        as.character(md),
         c("1. milk\n", "2. eggs\n")
     )
     expect_output(
