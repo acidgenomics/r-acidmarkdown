@@ -5,6 +5,8 @@
 - Removed usage of magrittr pipe `%>%` in `_footer.Rmd` template file.
   Switched from `readr::read_lines` to `pipette::import` for source code
   lines import instead.
+- Removed dependency on stringr package by removing `str_dup` in favor of
+  using base R `rep` method instead.
 
 ## AcidMarkdown 0.1.1 (2021-03-04)
 
