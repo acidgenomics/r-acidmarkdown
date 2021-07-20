@@ -23,8 +23,7 @@ Encoding: UTF-8
 Depends: R (>= 4.0)
 Imports:
     goalie (>= 0.5.2),
-    knitr,
-    stringr,
+    knitr (>= 1.33),
     utils
 Suggests:
     datasets,

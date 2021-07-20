@@ -34,7 +34,8 @@ markdownHeader <- function(
         isFlag(asis)
     )
     ## Add the header level.
-    text <- paste(str_dup("#", level), text)
+    prefix <- paste(rep("#", times = level), collapse = "")
+    text <- paste(prefix, text)
     ## Append tabset label
     if (isTRUE(tabset)) {
         text <- paste(text, "{.tabset}")
