@@ -1,3 +1,11 @@
+## AcidMarkdown 0.1.2 (2021-07-20)
+
+### Minor changes
+
+- Removed usage of magrittr pipe `%>%` in `_footer.Rmd` template file.
+  Switched from `readr::read_lines` to `pipette::import` for source code
+  lines import instead.
+
 ## AcidMarkdown 0.1.1 (2021-03-04)
 
 ### Minor changes
