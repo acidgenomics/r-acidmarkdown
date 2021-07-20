@@ -5,7 +5,7 @@ markdownHeader("YAML params", level = 2)
 print(params)
 
 markdownHeader("`_setup.R`", level = 2)
-writeLines(readr::read_lines("_setup.R"))
+writeLines(import("_setup.R", format = "lines"))
 
 markdownHeader("`sessioninfo::session_info()`", level = 2)
 sessioninfo::session_info()
