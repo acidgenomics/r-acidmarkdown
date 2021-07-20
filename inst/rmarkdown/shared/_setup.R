@@ -1,3 +1,18 @@
+## Acid Genomics shared R setup script.
+## Last updated 2021-03-04.
+##
+## This file is defined inside the AcidMarkdown package:
+## > system.file(
+## >     "rmarkdown",
+## >     "shared",
+## >     "_setup.R",
+## >     package = "AcidMarkdown"
+## > )
+##
+## If you encounter any problems with this configuration or have suggestions
+## for improvement, please file an issue here:
+## https://github.com/acidgenomics/r-acidmarkdown/issues
+
 ## Set seed for reproducibility. Using Fibonacci sequence.
 set.seed(1123581321L)
 
@@ -27,9 +42,9 @@ knitr::opts_chunk[["set"]](
 
 ## Set default ggplot2 theme.
 requireNamespace(package = "ggplot2")
-requireNamespace(package = "acidplots")
+requireNamespace(package = "AcidPlots")
 ggplot2::theme_set(
-    acidplots::acid_theme_light(
+    AcidPlots::acid_theme_light(
         base_size = 14L,
         legend_position = "right"
     )
