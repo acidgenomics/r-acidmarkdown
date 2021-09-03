@@ -17,7 +17,6 @@
 #' @seealso
 #' - Examples taken from:
 #'   https://bookdown.org/rdpeng/exdata/the-base-plotting-system-1.html
-#' - `cowplot::plot_grid()`.
 #'
 #' @examples
 #' ## Base R plotting example.
