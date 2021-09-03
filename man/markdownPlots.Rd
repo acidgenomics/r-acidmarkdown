@@ -38,6 +38,5 @@ markdownPlots(list = list)
 \itemize{
 \item Examples taken from:
 https://bookdown.org/rdpeng/exdata/the-base-plotting-system-1.html
-\item \code{cowplot::plot_grid()}.
 }
 }
