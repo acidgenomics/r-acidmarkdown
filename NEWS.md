@@ -1,3 +1,11 @@
+## AcidMarkdown 0.1.3 (2021-09-08)
+
+### Minor changes
+
+- Updated basejump dependencies.
+- Removed documentation reference to cowplot `plot_grid` function. Now
+  recommending usage of patchwork package instead.
+
 ## AcidMarkdown 0.1.2 (2021-07-20)
 
 ### Minor changes
