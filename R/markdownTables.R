@@ -2,7 +2,7 @@
 #'
 #' Knit multiple tables in a single R Markdown chunk.
 #'
-#' @note [knitr::kable()] now supports multiple tables as a `list` for the `x`
+#' @note `knitr::kable()` now supports multiple tables as a `list` for the `x`
 #'   argument, but it still only supports a single caption. `markdownTables`
 #'   extends this functionality, but supporting captions for each table.
 #' @note Updated 2021-02-04.
@@ -12,7 +12,7 @@
 #' @param list Named `list`.
 #'   Must contain data that can be coerced to `data.frame`.
 #' @param force `logical(1)`.
-#'   Force knit output using [knitr::asis_output()].
+#'   Force knit output using `knitr::asis_output()`.
 #'   *Recommended for development and unit testing only.*
 #'
 #' @return
