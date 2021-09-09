@@ -1,3 +1,9 @@
+## AcidMarkdown 0.1.4 (2021-09-09)
+
+### Major changes
+
+- Now setting default ggplot2 colors in `_setup.R` file.
+
 ## AcidMarkdown 0.1.3 (2021-09-08)
 
 ### Minor changes
