@@ -18,7 +18,7 @@ set.seed(1123581321L)
 
 invisible(lapply(
     X = c(
-        "AcidPlots"
+        "AcidPlots",
         "ggplot2",
         "knitr",
         "rlang"
