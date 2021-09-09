@@ -26,7 +26,10 @@ Imports:
     knitr (>= 1.33),
     utils
 Suggests:
+    AcidPlots,
     datasets,
+    ggplot2,
+    rlang,
     rmarkdown,
     testthat
 Roxygen: list(markdown = TRUE)
