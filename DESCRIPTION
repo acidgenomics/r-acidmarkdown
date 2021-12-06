@@ -1,8 +1,8 @@
 Package: AcidMarkdown
 Title: Acid Genomics R Markdown
 Description: Toolkit for extending the functionality of R Markdown.
-Version: 0.1.4
-Date: 2021-09-09
+Version: 0.1.5.9000
+Date: 2021-12-06
 Authors@R: c(
     person(
         "Michael", "Steinbaugh",
@@ -20,10 +20,10 @@ URL:
 BugReports: https://github.com/acidgenomics/r-acidmarkdown/issues/
 License: AGPL-3
 Encoding: UTF-8
-Depends: R (>= 4.0)
+Depends: R (>= 4.1)
 Imports:
-    goalie (>= 0.5.4),
-    knitr (>= 1.33),
+    goalie (>= 0.6.0.9000),
+    knitr (>= 1.36),
     utils
 Suggests:
     AcidPlots,
