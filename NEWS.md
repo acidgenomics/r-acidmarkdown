@@ -1,3 +1,15 @@
+## AcidMarkdown 0.1.5 (2021-12-15)
+
+### Minor changes
+
+- Disabling ggplot custom color and fill palette overrides in `_setup.R` include
+  file until we push a new version of the AcidPlots package. Currently causing
+  bcbioRNASeq quality control R Markdown template to fail.
+- Updated and reorganized references defined `bibliography.bib` file. Had to
+  rework ggplot2 reference, as this was observed to cause pandoc 2.16 to fail.
+  Note that pandoc 2.14, the version bundled with RStudio, at least on macOS,
+  does not have this rendering issue, which is why it was difficult to catch.
+
 ## AcidMarkdown 0.1.4 (2021-09-09)
 
 ### Major changes
