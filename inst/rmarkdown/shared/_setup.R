@@ -52,9 +52,9 @@ knitr::opts_chunk[["set"]](
 )
 
 ## Set default ggplot2 colors and theme.
-## Disabling color and fill override temporarily until we push a new version
-## of AcidPlots package. This is currently causing render issues for bcbioRNASeq
-## quality control R Markdown template (2021-12-15).
+## NOTE Disabling custom color and fill override temporarily until we push a new
+## version of AcidPlots package. This is currently causing R Markdown template
+## rendering issues for bcbioRNASeq quality control (2021-12-15).
 ## > options(
 ## >     "ggplot2.continuous.colour" =
 ## >         AcidPlots::scale_color_synesthesia_c,
