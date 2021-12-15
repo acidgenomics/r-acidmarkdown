@@ -1,5 +1,5 @@
 ## Acid Genomics shared R setup script.
-## Last updated 2021-09-09.
+## Last updated 2021-12-15.
 ##
 ## This file is defined inside the AcidMarkdown package:
 ## > system.file(
@@ -11,7 +11,7 @@
 ##
 ## If you encounter any problems with this configuration or have suggestions
 ## for improvement, please file an issue here:
-## https://github.com/acidgenomics/r-acidmarkdown/issues
+## https://github.com/acidgenomics/r-acidmarkdown/issues/
 
 ## Set seed for reproducibility. Using Fibonacci sequence.
 set.seed(1123581321L)
@@ -52,16 +52,19 @@ knitr::opts_chunk[["set"]](
 )
 
 ## Set default ggplot2 colors and theme.
-options(
-    "ggplot2.continuous.colour" =
-        AcidPlots::scale_color_synesthesia_c,
-    "ggplot2.continuous.fill" =
-        AcidPlots::scale_fill_synesthesia_c,
-    "ggplot2.discrete.colour" =
-        AcidPlots::scale_color_synesthesia_d,
-    "ggplot2.discrete.fill" =
-        AcidPlots::scale_fill_synesthesia_d
-)
+## Disabling color and fill override temporarily until we push a new version
+## of AcidPlots package. This is currently causing render issues for bcbioRNASeq
+## quality control R Markdown template (2021-12-15).
+## > options(
+## >     "ggplot2.continuous.colour" =
+## >         AcidPlots::scale_color_synesthesia_c,
+## >     "ggplot2.continuous.fill" =
+## >         AcidPlots::scale_fill_synesthesia_c,
+## >     "ggplot2.discrete.colour" =
+## >         AcidPlots::scale_color_synesthesia_d,
+## >     "ggplot2.discrete.fill" =
+## >         AcidPlots::scale_fill_synesthesia_d
+## > )
 ggplot2::theme_set(
     AcidPlots::acid_theme_light(
         base_size = 14L,
