@@ -1,5 +1,5 @@
 ## Acid Genomics shared R setup script.
-## Last updated 2021-12-15.
+## Last updated 2022-03-03.
 ##
 ## This file is defined inside the AcidMarkdown package:
 ## > system.file(
@@ -18,10 +18,13 @@ set.seed(1123581321L)
 
 invisible(lapply(
     X = c(
+        "AcidBase",
         "AcidPlots",
         "ggplot2",
+        "goalie",
         "knitr",
-        "rlang"
+        "rlang",
+        "sessioninfo"
     ),
     FUN = requireNamespace,
     quietly = TRUE
@@ -70,4 +73,21 @@ ggplot2::theme_set(
         base_size = 14L,
         legend_position = "right"
     )
+)
+
+## Improve default interactive loading/saving to use dated subdirectories.
+dirs <- list(
+    "rds" = AcidBase::initDir(file.path("rds", Sys.Date())),
+    "results" = AcidBase::initDir(file.path("results", Sys.Date()))
+)
+options(
+    "acid.export.dir" = dirs[["results"]],
+    "acid.load.dir" = dirs[["rds"]],
+    "acid.save.dir" = dirs[["rds"]]
+)
+
+## Ensure we save session information.
+saveRDS(
+    object = sessioninfo::session_info(),
+    file = file.path(dirs[["rds"]], "session-info.rds")
 )
