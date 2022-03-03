@@ -18,13 +18,12 @@ set.seed(1123581321L)
 
 invisible(lapply(
     X = c(
-        "AcidBase",
+        ## > "AcidBase"
+        ## > "sessioninfo"
         "AcidPlots",
         "ggplot2",
-        "goalie",
         "knitr",
-        "rlang",
-        "sessioninfo"
+        "rlang"
     ),
     FUN = requireNamespace,
     quietly = TRUE
@@ -76,18 +75,18 @@ ggplot2::theme_set(
 )
 
 ## Improve default interactive loading/saving to use dated subdirectories.
-dirs <- list(
-    "rds" = AcidBase::initDir(file.path("rds", Sys.Date())),
-    "results" = AcidBase::initDir(file.path("results", Sys.Date()))
-)
-options(
-    "acid.export.dir" = dirs[["results"]],
-    "acid.load.dir" = dirs[["rds"]],
-    "acid.save.dir" = dirs[["rds"]]
-)
+## > dirs <- list(
+## >     "rds" = AcidBase::initDir(file.path("rds", Sys.Date())),
+## >     "results" = AcidBase::initDir(file.path("results", Sys.Date()))
+## > )
+## > options(
+## >     "acid.export.dir" = dirs[["results"]],
+## >     "acid.load.dir" = dirs[["rds"]],
+## >     "acid.save.dir" = dirs[["rds"]]
+## > )
 
 ## Ensure we save session information.
-saveRDS(
-    object = sessioninfo::session_info(),
-    file = file.path(dirs[["rds"]], "session-info.rds")
-)
+## > saveRDS(
+## >     object = sessioninfo::session_info(),
+## >     file = file.path(dirs[["rds"]], "session-info.rds")
+## > )
