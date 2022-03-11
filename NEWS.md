@@ -1,4 +1,9 @@
-# AcidMarkdown 0.1.6 (UNRELEASED)
+# AcidMarkdown 0.1.6 (2022-03-11)
+
+## Minor changes
+
+- Added useful commented code into default `_setup.R` file for R Markdown.
+- Updated website to use bootstrap 5 template.
 
 # AcidMarkdown 0.1.5 (2021-12-15)
 
