@@ -20,13 +20,14 @@
 #' @export
 #'
 #' @param package `character(1)` or `NULL`.
-#'   Name of package containing the R Markdown template. If `NULL`, only the
-#'   basic shared files defined in the basejump package will be copied.
+#' Name of package containing the R Markdown template. If `NULL`, only the
+#' basic shared files defined in the basejump package will be copied.
+#'
 #' @param overwrite `logical(1)`.
-#'   Should existing destination files be overwritten?
+#' Should existing destination files be overwritten?
 #'
 #' @return Invisible `logical`.
-#'   Was the file copied?.
+#' Was the file copied?.
 #'
 #' @examples
 #' ## RNA-seq template.
