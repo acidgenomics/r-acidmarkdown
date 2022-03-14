@@ -8,7 +8,7 @@
 #'
 #' @inheritParams AcidRoxygen::params
 #' @param level `integer(1)`.
-#'   Markdown header level (1-7).
+#' Markdown header level (1-7).
 #'
 #' @seealso
 #' [Markdown Syntax](https://daringfireball.net/projects/markdown/syntax).
@@ -21,38 +21,37 @@
 #' markdownHeader("Header", level = 2L)
 #' markdownHeader("Header", tabset = TRUE)
 #' markdownHeader("Header", asis = TRUE)
-markdownHeader <- function(
-    text,
-    level = 2L,
-    tabset = FALSE,
-    asis = FALSE
-) {
-    assert(
-        isString(text),
-        isHeaderLevel(level),
-        isFlag(tabset),
-        isFlag(asis)
-    )
-    ## Add the header level.
-    prefix <- paste(rep("#", times = level), collapse = "")
-    text <- paste(prefix, text)
-    ## Append tabset label
-    if (isTRUE(tabset)) {
-        text <- paste(text, "{.tabset}")
+markdownHeader <-
+    function(text,
+             level = 2L,
+             tabset = FALSE,
+             asis = FALSE) {
+        assert(
+            isString(text),
+            isHeaderLevel(level),
+            isFlag(tabset),
+            isFlag(asis)
+        )
+        ## Add the header level.
+        prefix <- paste(rep("#", times = level), collapse = "")
+        text <- paste(prefix, text)
+        ## Append tabset label
+        if (isTRUE(tabset)) {
+            text <- paste(text, "{.tabset}")
+        }
+        ## Return.
+        if (isTRUE(asis)) {
+            text <- c("", "", text, "")
+            writeLines(text = text, con = stdout())
+        } else {
+            ## Ensure trailing line break.
+            text <- paste0(text, "\n")
+            ## Specify that output should be handled as Markdown text.
+            text <- structure(text, format = "markdown")
+            text <- asis_output(text)
+            text
+        }
     }
-    ## Return.
-    if (isTRUE(asis)) {
-        text <- c("", "", text, "")
-        writeLines(text = text, con = stdout())
-    } else {
-        ## Ensure trailing line break.
-        text <- paste0(text, "\n")
-        ## Specify that output should be handled as Markdown text.
-        text <- structure(text, format = "markdown")
-        text <- asis_output(text)
-        text
-    }
-}
 
 
 

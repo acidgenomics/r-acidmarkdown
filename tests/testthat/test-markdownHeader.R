@@ -9,7 +9,7 @@ test_that("level", {
     md <- markdownHeader("Header", level = 4L)
     expect_identical(
         object = as.character(md),
-        expected = "#### Header\n"  # nolint
+        expected = "#### Header\n" # nolint
     )
 })
 
@@ -24,13 +24,13 @@ test_that("tabset", {
     md <- markdownHeader("Header", tabset = TRUE)
     expect_identical(
         object = as.character(md),
-        expected = "## Header {.tabset}\n"  # nolint
+        expected = "## Header {.tabset}\n" # nolint
     )
 })
 
 test_that("asis", {
     expect_output(
         object = markdownHeader("Header", asis = TRUE),
-        regexp = "\\n\\n## Header\\n"  # nolint
+        regexp = "\\n\\n## Header\\n" # nolint
     )
 })
