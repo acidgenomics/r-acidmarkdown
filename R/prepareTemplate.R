@@ -16,7 +16,7 @@
 #' - `bcbioRNASeq::prepareRNASeqTemplate()`.
 #' - `bcbioSingleCell::prepareSingleCellTemplate()`.
 #'
-#' @note Updated 2021-02-04.
+#' @note Updated 2021-02-29.
 #' @export
 #'
 #' @param package `character(1)` or `NULL`.
@@ -37,6 +37,7 @@
 #' ## > prepareTemplate(package = "bcbioSingleCell")
 prepareTemplate <- function(package = NULL, overwrite = FALSE) {
     assert(
+        requireNamespace("utils", quietly = TRUE),
         isString(package, nullOK = TRUE),
         isFlag(overwrite)
     )
@@ -74,7 +75,7 @@ prepareTemplate <- function(package = NULL, overwrite = FALSE) {
     ## which we don't necessarily want to overwrite by default.
     sourceDir <- system.file(
         "rmarkdown", "shared",
-        package = packageName(), mustWork = TRUE
+        package = utils::packageName(), mustWork = TRUE
     )
     copied <- copySharedFiles(sourceDir, overwrite = overwrite)
     files <- c(files, copied)

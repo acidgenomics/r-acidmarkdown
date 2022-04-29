@@ -1,3 +1,11 @@
+# AcidMarkdown 0.2.0 (2022-04-29)
+
+## Major changes
+
+- Updated R dependency to 4.2
+- Removed strong `Imports` dependency of knitr, in favor of lighter `Suggests`
+  approach that loads functions conditionally using `requireNamespace`.
+
 # AcidMarkdown 0.1.6 (2022-03-11)
 
 ## Minor changes
