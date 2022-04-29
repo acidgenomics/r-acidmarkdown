@@ -35,8 +35,6 @@ list <- list("ozone" = p1, "wind" = p2)
 markdownPlots(list = list)
 }
 \seealso{
-\itemize{
-\item Examples taken from:
+Examples taken from:
 https://bookdown.org/rdpeng/exdata/the-base-plotting-system-1.html
-}
 }
