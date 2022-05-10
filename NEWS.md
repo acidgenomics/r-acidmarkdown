@@ -1,8 +1,15 @@
+# AcidMarkdonw 0.2.1 (2022-05-10)
+
+## Minor changes
+
+- Simplified session information return in shared footer to only use
+  `utils::sessionInfo`.
+
 # AcidMarkdown 0.2.0 (2022-04-29)
 
 ## Major changes
 
-- Updated R dependency to 4.2
+- Updated R dependency to 4.2.
 - Removed strong `Imports` dependency of knitr, in favor of lighter `Suggests`
   approach that loads functions conditionally using `requireNamespace`.
 
