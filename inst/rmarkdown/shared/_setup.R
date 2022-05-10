@@ -1,5 +1,5 @@
 ## Acid Genomics shared R setup script.
-## Last updated 2022-03-03.
+## Last updated 2022-05-10.
 ##
 ## This file is defined inside the AcidMarkdown package:
 ## > system.file(
@@ -19,7 +19,7 @@ set.seed(1123581321L)
 invisible(lapply(
     X = c(
         ## > "AcidBase"
-        ## > "sessioninfo"
+        ## > "utils"
         "AcidPlots",
         "ggplot2",
         "knitr",
@@ -87,6 +87,6 @@ ggplot2::theme_set(
 
 ## Ensure we save session information.
 ## > saveRDS(
-## >     object = sessioninfo::session_info(),
+## >     object = utils::sessionInfo(),
 ## >     file = file.path(dirs[["rds"]], "session-info.rds")
 ## > )
