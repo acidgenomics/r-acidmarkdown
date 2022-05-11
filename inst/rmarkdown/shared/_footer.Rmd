@@ -1,12 +1,12 @@
 # R session information {.tabset}
 
 ```{r session_info}
-markdownHeader("YAML params", level = 2)
+markdownHeader("YAML params", level = 2L)
 print(params)
 
-markdownHeader("`_setup.R`", level = 2)
+markdownHeader("`_setup.R`", level = 2L)
 writeLines(import("_setup.R", format = "lines"))
 
-markdownHeader("`sessionInfo()`", level = 2)
+markdownHeader("`sessionInfo()`", level = 2L)
 utils::sessionInfo()
 ```
