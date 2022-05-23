@@ -1,3 +1,9 @@
+# AcidMarkdown 0.2.2 (2022-05-23)
+
+## Minor changes
+
+- Updated lintr checks and testthat unit tests.
+
 # AcidMarkdonw 0.2.1 (2022-05-10)
 
 ## Minor changes

@@ -2,11 +2,13 @@
 #'
 #' Knit multiple tables in a single R Markdown chunk.
 #'
-#' @note `knitr::kable()` now supports multiple tables as a `list` for the `x`
+#' @export
+#' @note Updated 2022-05-23.
+#'
+#' @details
+#' `knitr::kable()` now supports multiple tables as a `list` for the `x`
 #' argument, but it still only supports a single caption. `markdownTables`
 #' extends this functionality, but supporting captions for each table.
-#' @note Updated 2022-04-29.
-#' @export
 #'
 #' @inheritParams AcidRoxygen::params
 #'
@@ -55,14 +57,12 @@ markdownTables <-
         )
         output <- knitr::opts_knit[["get"]]("rmarkdown.pandoc.to")
         if (!is.null(output) || isTRUE(force)) {
-            tables <- mapply(
+            tables <- Map(
                 x = list,
                 caption = captions,
-                FUN = function(x, caption) {
+                f = function(x, caption) {
                     knitr::kable(x = as.data.frame(x), caption = caption)
-                },
-                SIMPLIFY = FALSE,
-                USE.NAMES = TRUE
+                }
             )
             knitr::asis_output(tables)
         } else {
@@ -70,7 +70,6 @@ markdownTables <-
             list
         }
     }
-
 
 
 

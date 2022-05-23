@@ -28,12 +28,13 @@ Force knit output using \code{knitr::asis_output()}.
 \description{
 Knit multiple tables in a single R Markdown chunk.
 }
-\note{
+\details{
 \code{knitr::kable()} now supports multiple tables as a \code{list} for the \code{x}
 argument, but it still only supports a single caption. \code{markdownTables}
 extends this functionality, but supporting captions for each table.
-
-Updated 2022-04-29.
+}
+\note{
+Updated 2022-05-23.
 }
 \examples{
 list <- list(
