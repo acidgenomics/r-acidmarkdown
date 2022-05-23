@@ -14,7 +14,7 @@ test_that("level", {
 test_that("invalid level", {
     expect_error(
         object = markdownHeader("Header", level = 8L),
-        expected = "Markdown supports header levels 1-7."
+        regexp = "Markdown supports header levels 1-7."
     )
 })
 
