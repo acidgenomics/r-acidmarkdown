@@ -1,5 +1,3 @@
-context("markdownTables")
-
 test_that("Return unmodified in (interactive) R session", {
     x <- markdownTables(
         list = list(
@@ -9,8 +7,8 @@ test_that("Return unmodified in (interactive) R session", {
         captions = c("iris", "mtcars"),
         force = FALSE
     )
-    expect_is(x, "list")
-    expect_identical(names(x), c("mpg", "mtcars"))
+    expect_type(x, "list")
+    expect_named(x, c("mpg", "mtcars"))
 })
 
 test_that("Simulated knit session", {
@@ -22,5 +20,5 @@ test_that("Simulated knit session", {
         captions = c("iris", "mtcars"),
         force = TRUE
     )
-    expect_is(x, "knit_asis")
+    expect_s3_class(x, "knit_asis")
 })

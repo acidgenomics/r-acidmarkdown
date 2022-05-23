@@ -1,8 +1,6 @@
-context("markdownHeader")
-
 test_that("default", {
     md <- markdownHeader("Header")
-    expect_is(md, "knit_asis")
+    expect_s3_class(md, "knit_asis")
 })
 
 test_that("level", {

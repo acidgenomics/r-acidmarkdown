@@ -1,5 +1,3 @@
-context("markdownPlots")
-
 data(airquality, package = "datasets", envir = environment())
 
 test_that("markdownPlots", {

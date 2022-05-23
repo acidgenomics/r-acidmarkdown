@@ -1,5 +1,3 @@
-context("markdownLink")
-
 test_that("markdownLink", {
     expect_output(
         object = markdownLink(

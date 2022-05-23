@@ -1,12 +1,7 @@
-context("markdownList")
-
 test_that("markdownList", {
     groceries <- c("milk", "eggs")
     md <- markdownList(groceries)
-    expect_identical(
-        class(md),
-        "knit_asis"
-    )
+    expect_s3_class(md, "knit_asis")
     md <- markdownList(groceries)
     expect_identical(
         as.character(md),

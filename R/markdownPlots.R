@@ -32,16 +32,15 @@ markdownPlots <-
             hasNames(list),
             isHeaderLevel(headerLevel)
         )
-        invisible(mapply(
+        invisible(Map(
             name = names(list),
             plot = list,
-            MoreArgs = list(headerLevel = headerLevel),
-            FUN = function(name, plot, headerLevel) {
+            MoreArgs = list("headerLevel" = headerLevel),
+            f = function(name, plot, headerLevel) {
                 assert(isString(name))
                 markdownHeader(name, level = headerLevel, asis = TRUE)
                 plot(plot)
-            },
-            SIMPLIFY = FALSE
+            }
         ))
     }
 
