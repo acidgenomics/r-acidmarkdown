@@ -23,7 +23,8 @@ Encoding: UTF-8
 Depends: R (>= 4.2)
 Imports:
     AcidGenerics,
-    goalie
+    goalie,
+    methods
 Suggests:
     AcidPlots,
     datasets,

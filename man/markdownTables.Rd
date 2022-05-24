@@ -41,12 +41,12 @@ Updated 2022-05-24.
 }
 \examples{
 list <- list(
-    iris = head(datasets::iris),
-    mtcars = head(datasets::mtcars)
+    "iris" = head(datasets::iris),
+    "mtcars" = head(datasets::mtcars)
 )
 captions <- c(
-    iris = "Edgar Anderson's iris data",
-    mtcars = "Motor Trend car road tests"
+    "iris" = "Edgar Anderson's iris data",
+    "mtcars" = "Motor Trend car road tests"
 )
 markdownTables(list, captions = captions)
 }
