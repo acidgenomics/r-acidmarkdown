@@ -2,15 +2,15 @@
 % Please edit documentation in R/AllGenerics.R, R/markdownTables-methods.R
 \name{markdownTables}
 \alias{markdownTables}
-\title{Multiple Markdown tables}
+\alias{markdownTables,list-method}
+\title{Markdown tables}
 \usage{
 markdownTables(object, ...)
 
-markdownTables(list, captions = NULL, force = FALSE)
+\S4method{markdownTables}{list}(object, captions = NULL, force = FALSE)
 }
 \arguments{
-\item{list}{Named \code{list}.
-Must contain data that can be coerced to \code{data.frame}.}
+\item{object}{Object.}
 
 \item{captions}{\code{character} or \code{NULL}.
 Captions.
@@ -19,6 +19,8 @@ If \code{NULL}, the names of the primary input list will be used automatically.}
 \item{force}{\code{logical(1)}.
 Force knit output using \code{knitr::asis_output()}.
 \emph{Recommended for development and unit testing only.}}
+
+\item{...}{Additional arguments.}
 }
 \value{
 \itemize{
@@ -27,7 +29,7 @@ Force knit output using \code{knitr::asis_output()}.
 }
 }
 \description{
-Knit multiple tables in a single R Markdown chunk.
+Markdown tables
 }
 \details{
 \code{knitr::kable()} now supports multiple tables as a \code{list} for the \code{x}
@@ -35,7 +37,7 @@ argument, but it still only supports a single caption. \code{markdownTables}
 extends this functionality, but supporting captions for each table.
 }
 \note{
-Updated 2022-05-23.
+Updated 2022-05-24.
 }
 \examples{
 list <- list(
@@ -46,7 +48,7 @@ captions <- c(
     iris = "Edgar Anderson's iris data",
     mtcars = "Motor Trend car road tests"
 )
-markdownTables(list = list, captions = captions)
+markdownTables(list, captions = captions)
 }
 \seealso{
 \itemize{

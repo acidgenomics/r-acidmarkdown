@@ -5,7 +5,7 @@ test_that("markdownPlots", {
     p2 <- hist(airquality[["Wind"]], plot = FALSE)
     list <- list("ozone" = p1, "wind" = p2)
     expect_output(
-        object = markdownPlots(list = list),
+        object = markdownPlots(list),
         regexp = "## ozone"
     )
 })

@@ -1,8 +1,8 @@
 test_that("Return unmodified in (interactive) R session", {
     x <- markdownTables(
-        list = list(
-            mpg = head(datasets::iris),
-            mtcars = head(datasets::mtcars)
+        object = list(
+            "mpg" = head(datasets::iris),
+            "mtcars" = head(datasets::mtcars)
         ),
         captions = c("iris", "mtcars"),
         force = FALSE
@@ -13,7 +13,7 @@ test_that("Return unmodified in (interactive) R session", {
 
 test_that("Simulated knit session", {
     x <- markdownTables(
-        list = list(
+        object = list(
             head(datasets::iris),
             head(datasets::mtcars)
         ),
