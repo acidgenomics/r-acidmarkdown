@@ -1,3 +1,11 @@
+# AcidMarkdown 0.2.3 (2022-05-24)
+
+## Major changes
+
+- Reworked `markdownPlots` and `markdownTables` using an S4 generic approach,
+  as these are useful in other bioinformatics packages.
+- Removed all `md*` aliases from NAMESPACE.
+
 # AcidMarkdown 0.2.2 (2022-05-23)
 
 ## Minor changes
