@@ -26,7 +26,7 @@ NULL
 
 
 ## Updated 2022-05-24.
-`markdownPlots,list` <-
+`markdownPlots,list` <- # nolint
     function(object, headerLevel = 2L) {
         assert(
             hasLength(object),

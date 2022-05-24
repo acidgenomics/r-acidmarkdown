@@ -1,9 +1,6 @@
-#' Multiple Markdown tables
-#'
-#' Knit multiple tables in a single R Markdown chunk.
-#'
-#' @export
-#' @note Updated 2022-05-23.
+#' @name markdownTables
+#' @inherit AcidGenerics::markdownTables
+#' @note Updated 2022-05-24.
 #'
 #' @details
 #' `knitr::kable()` now supports multiple tables as a `list` for the `x`
@@ -11,9 +8,7 @@
 #' extends this functionality, but supporting captions for each table.
 #'
 #' @inheritParams AcidRoxygen::params
-#'
-#' @param list Named `list`.
-#' Must contain data that can be coerced to `data.frame`.
+#' @param ... Additional arguments.
 #'
 #' @param force `logical(1)`.
 #' Force knit output using `knitr::asis_output()`.
@@ -29,21 +24,26 @@
 #'
 #' @examples
 #' list <- list(
-#'     iris = head(datasets::iris),
-#'     mtcars = head(datasets::mtcars)
+#'     "iris" = head(datasets::iris),
+#'     "mtcars" = head(datasets::mtcars)
 #' )
 #' captions <- c(
-#'     iris = "Edgar Anderson's iris data",
-#'     mtcars = "Motor Trend car road tests"
+#'     "iris" = "Edgar Anderson's iris data",
+#'     "mtcars" = "Motor Trend car road tests"
 #' )
-#' markdownTables(list = list, captions = captions)
-markdownTables <-
-    function(list,
+#' markdownTables(list, captions = captions)
+NULL
+
+
+
+## Updated 2022-05-24.
+`markdownTables,list` <- # nolint
+    function(object,
              captions = NULL,
              force = FALSE) {
         assert(
             requireNamespace("knitr", quietly = TRUE),
-            is.list(list),
+            hasLength(object),
             isAny(captions, classes = c("character", "NULL"))
         )
         if (is.null(captions)) {
@@ -52,13 +52,13 @@ markdownTables <-
         }
         assert(
             isCharacter(captions),
-            areSameLength(list, captions),
+            areSameLength(object, captions),
             isFlag(force)
         )
         output <- knitr::opts_knit[["get"]]("rmarkdown.pandoc.to")
         if (!is.null(output) || isTRUE(force)) {
             tables <- Map(
-                x = list,
+                x = object,
                 caption = captions,
                 f = function(x, caption) {
                     knitr::kable(x = as.data.frame(x), caption = caption)
@@ -67,6 +67,16 @@ markdownTables <-
             knitr::asis_output(tables)
         } else {
             ## Return the unmodified list if not in a knit call.
-            list
+            object
         }
     }
+
+
+
+#' @rdname markdownTables
+#' @export
+setMethod(
+    f = "markdownTables",
+    signature = signature(object = "list"),
+    definition = `markdownTables,list`
+)
