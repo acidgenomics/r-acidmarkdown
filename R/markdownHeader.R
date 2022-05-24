@@ -53,10 +53,3 @@ markdownHeader <-
             text
         }
     }
-
-
-
-#' @rdname markdownHeader
-#' @usage NULL
-#' @export
-mdHeader <- markdownHeader

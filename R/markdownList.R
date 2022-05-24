@@ -50,10 +50,3 @@ markdownList <-
             text
         }
     }
-
-
-
-#' @rdname markdownList
-#' @usage NULL
-#' @export
-mdList <- markdownList

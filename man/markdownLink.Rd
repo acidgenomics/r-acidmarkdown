@@ -2,7 +2,6 @@
 % Please edit documentation in R/markdownLink.R
 \name{markdownLink}
 \alias{markdownLink}
-\alias{mdLink}
 \title{Markdown hyperlink}
 \usage{
 markdownLink(text, url, title = NULL)

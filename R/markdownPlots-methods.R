@@ -1,18 +1,14 @@
-#' Multiple Markdown plots
+#' @name markdownPlots
+#' @inherit AcidGenerics::markdownPlots
+#' @note Updated 2022-05-24.
 #'
+#' @details
 #' Supports using a named `list` containing multiple `ggplot` objects, which
 #' can be used in an R Markdown report, separated by headers. Internally, the
 #' headers are generated with the `markdownHeader` function.
 #'
-#' @note Updated 2021-02-04.
-#' @export
-#'
 #' @inheritParams AcidRoxygen::params
-#' @param list `list`.
-#' Named list containing `ggplot` objects.
-#'
-#' @return Graphical output of plots.
-#' Separated by Markdown headers.
+#' @param ... Additional arguments.
 #'
 #' @seealso
 #' Examples taken from:
@@ -24,17 +20,22 @@
 #' p1 <- hist(airquality[["Ozone"]], plot = FALSE)
 #' p2 <- hist(airquality[["Wind"]], plot = FALSE)
 #' list <- list("ozone" = p1, "wind" = p2)
-#' markdownPlots(list = list)
-markdownPlots <-
-    function(list, headerLevel = 2L) {
+#' markdownPlots(list)
+NULL
+
+
+
+## Updated 2022-05-24.
+`markdownPlots,list` <-
+    function(object, headerLevel = 2L) {
         assert(
-            is.list(list),
-            hasNames(list),
+            hasLength(object),
+            hasNames(object),
             isHeaderLevel(headerLevel)
         )
         invisible(Map(
-            name = names(list),
-            plot = list,
+            name = names(object),
+            plot = object,
             MoreArgs = list("headerLevel" = headerLevel),
             f = function(name, plot, headerLevel) {
                 assert(isString(name))
@@ -47,6 +48,9 @@ markdownPlots <-
 
 
 #' @rdname markdownPlots
-#' @usage NULL
 #' @export
-mdPlots <- markdownPlots
+setMethod(
+    f = "markdownPlots",
+    signature = signature(object = "list"),
+    definition = `markdownPlots,list`
+)

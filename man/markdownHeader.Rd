@@ -2,7 +2,6 @@
 % Please edit documentation in R/markdownHeader.R
 \name{markdownHeader}
 \alias{markdownHeader}
-\alias{mdHeader}
 \title{Markdown header}
 \usage{
 markdownHeader(text, level = 2L, tabset = FALSE, asis = FALSE)

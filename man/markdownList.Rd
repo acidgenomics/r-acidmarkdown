@@ -2,7 +2,6 @@
 % Please edit documentation in R/markdownList.R
 \name{markdownList}
 \alias{markdownList}
-\alias{mdList}
 \title{Markdown list}
 \usage{
 markdownList(text, ordered = FALSE, asis = FALSE)
