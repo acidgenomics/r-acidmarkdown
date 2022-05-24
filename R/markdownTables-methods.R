@@ -70,10 +70,3 @@ markdownTables <-
             list
         }
     }
-
-
-
-#' @rdname markdownTables
-#' @usage NULL
-#' @export
-mdTables <- markdownTables

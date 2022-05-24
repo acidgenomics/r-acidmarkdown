@@ -32,10 +32,3 @@ markdownLink <-
         }
         writeLines(text = text, con = stdout())
     }
-
-
-
-#' @rdname markdownLink
-#' @usage NULL
-#' @export
-mdLink <- markdownLink
