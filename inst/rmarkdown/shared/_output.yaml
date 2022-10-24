@@ -7,10 +7,11 @@ html_document:
   number_sections: false
   self_contained: true
   toc: true
+  toc_depth: 2
   toc_float:
     collapsed: true
     smooth_scroll: false
 pdf_document:
   number_sections: false
   toc: true
-  toc_depth: 1
+  toc_depth: 2
