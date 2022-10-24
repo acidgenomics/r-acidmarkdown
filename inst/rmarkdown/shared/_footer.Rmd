@@ -1,4 +1,4 @@
-# R session information {.tabset}
+## R session information {.tabset}
 
 ```{r session_info}
 markdownHeader("YAML params", level = 2L)

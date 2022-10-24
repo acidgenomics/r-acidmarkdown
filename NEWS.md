@@ -1,5 +1,12 @@
 # Release notes
 
+## AcidMarkdown 0.2.5 (2022-10-24)
+
+Major changes:
+
+- Attempt to use level 2 headers by default in R Markdown documents, which
+  plays nicer with markdownlint-cli (Node) and in VS Code.
+
 ## AcidMarkdown 0.2.4 (2022-09-01)
 
 - Added an additional `bcbio-nextgen` link, to avoid issues in bcbioRNASeq.
