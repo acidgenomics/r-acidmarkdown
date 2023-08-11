@@ -1,5 +1,5 @@
 ## Acid Genomics shared R setup script.
-## Last updated 2022-05-10.
+## Last updated 2023-08-11.
 ##
 ## This file is defined inside the AcidMarkdown package:
 ## > system.file(
@@ -54,25 +54,17 @@ knitr::opts_chunk[["set"]](
 )
 
 ## Set default ggplot2 colors and theme.
-## NOTE Disabling custom color and fill override temporarily until we push a new
-## version of AcidPlots package. This is currently causing R Markdown template
-## rendering issues for bcbioRNASeq quality control (2021-12-15).
 ## > options(
 ## >     "ggplot2.continuous.colour" =
-## >         AcidPlots::scale_color_synesthesia_c,
+## >         AcidPlots::acid_scale_color_synesthesia_c,
 ## >     "ggplot2.continuous.fill" =
-## >         AcidPlots::scale_fill_synesthesia_c,
+## >         AcidPlots::acid_scale_fill_synesthesia_c,
 ## >     "ggplot2.discrete.colour" =
-## >         AcidPlots::scale_color_synesthesia_d,
+## >         AcidPlots::acid_scale_color_synesthesia_d,
 ## >     "ggplot2.discrete.fill" =
-## >         AcidPlots::scale_fill_synesthesia_d
+## >         AcidPlots::acid_scale_fill_synesthesia_d
 ## > )
-ggplot2::theme_set(
-    AcidPlots::acid_theme_light(
-        base_size = 14L,
-        legend_position = "right"
-    )
-)
+ggplot2::theme_set(AcidPlots::acid_theme_light())
 
 ## Improve default interactive loading/saving to use dated subdirectories.
 ## > dirs <- list(

@@ -3,7 +3,7 @@
 #' Generate a Markdown header (levels 1-7) in any R Markdown code block. When
 #' calling inside an `asis` chunk, set `asis = TRUE`.
 #'
-#' @note Updated 2022-04-29.
+#' @note Updated 2023-08-11.
 #' @export
 #'
 #' @inheritParams AcidRoxygen::params
@@ -33,7 +33,7 @@ markdownHeader <-
             isFlag(asis)
         )
         ## Add the header level.
-        prefix <- paste(rep("#", times = level), collapse = "")
+        prefix <- strrep(x = "#", times = level)
         text <- paste(prefix, text)
         ## Append tabset label
         if (isTRUE(tabset)) {
