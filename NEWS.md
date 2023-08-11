@@ -1,5 +1,12 @@
 # Release notes
 
+## AcidMarkdown 0.2.6 (2023-08-11)
+
+Minor changes:
+
+- Now requiring R 4.3.
+- Updated shared `_setup.R` file to reflect changes in AcidPlots package.
+
 ## AcidMarkdown 0.2.5 (2022-10-24)
 
 Major changes:
