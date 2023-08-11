@@ -1,5 +1,7 @@
 # AcidMarkdown
 
+![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-green.svg)
+
 Toolkit for extending the functionality of [R Markdown][].
 
 ## Installation
