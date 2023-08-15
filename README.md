@@ -1,6 +1,6 @@
 # AcidMarkdown
 
-![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-green.svg)
+[![Install with Bioconda](https://img.shields.io/badge/install%20with-bioconda-brightgreen.svg)](http://bioconda.github.io/recipes/r-acidmarkdown/README.html) ![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)
 
 Toolkit for extending the functionality of [R Markdown][].
 
@@ -19,7 +19,7 @@ install.packages(
 )
 ```
 
-### [conda][] method
+### [Conda][] method
 
 Configure [conda][] to use the [bioconda][] channels.
 
@@ -31,6 +31,7 @@ conda activate "$name"
 R
 ```
 
+[bioconda]: https://bioconda.github.io/
 [conda]: https://conda.io/
 [r markdown]: https://rmarkdown.rstudio.com/
 [r]: https://www.r-project.org/
