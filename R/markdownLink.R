@@ -24,7 +24,7 @@ markdownLink <-
         assert(
             isString(text),
             isString(url),
-            isString(title, nullOK = TRUE)
+            isString(title, nullOk = TRUE)
         )
         text <- paste0("[", text, "](", url, ")")
         if (!is.null(title)) {

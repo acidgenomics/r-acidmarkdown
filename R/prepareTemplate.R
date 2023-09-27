@@ -38,7 +38,7 @@
 prepareTemplate <- function(package = NULL, overwrite = FALSE) {
     assert(
         requireNamespace("utils", quietly = TRUE),
-        isString(package, nullOK = TRUE),
+        isString(package, nullOk = TRUE),
         isFlag(overwrite)
     )
     files <- character()
