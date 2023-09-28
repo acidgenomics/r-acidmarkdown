@@ -25,15 +25,8 @@ function will copy dependency files from a requested package inside the
 \verb{rmarkdown/shared/} directory. If a package doesn't contain this
 subdirectory, the function will return an error.
 }
-\details{
-This code is used internally by:
-\itemize{
-\item \code{bcbioRNASeq::prepareRNASeqTemplate()}.
-\item \code{bcbioSingleCell::prepareSingleCellTemplate()}.
-}
-}
 \note{
-Updated 2021-02-29.
+Updated 2023-09-28.
 }
 \examples{
 ## RNA-seq template.
