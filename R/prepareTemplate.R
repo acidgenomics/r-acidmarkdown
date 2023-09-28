@@ -11,12 +11,7 @@
 #' `rmarkdown/shared/` directory. If a package doesn't contain this
 #' subdirectory, the function will return an error.
 #'
-#' This code is used internally by:
-#'
-#' - `bcbioRNASeq::prepareRNASeqTemplate()`.
-#' - `bcbioSingleCell::prepareSingleCellTemplate()`.
-#'
-#' @note Updated 2021-02-29.
+#' @note Updated 2023-09-28.
 #' @export
 #'
 #' @param package `character(1)` or `NULL`.
