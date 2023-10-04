@@ -1,5 +1,11 @@
 # Release notes
 
+## AcidMarkdown 0.3.0 (2023-10-04)
+
+Major changes:
+
+- Starting a new release series in line with other Acid Genomes packages.
+
 ## AcidMarkdown 0.2.6 (2023-08-11)
 
 Minor changes:
