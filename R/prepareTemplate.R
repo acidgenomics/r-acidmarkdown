@@ -1,8 +1,3 @@
-## We're covering the code below in bcbioRNASeq and bcbioSingleCell.
-## nocov start
-
-
-
 #' Prepare R Markdown template
 #'
 #' If the required template dependency files aren't present, copy them from the
@@ -76,7 +71,3 @@ prepareTemplate <- function(package = NULL, overwrite = FALSE) {
     files <- c(files, copied)
     invisible(files)
 }
-
-
-
-## nocov end
