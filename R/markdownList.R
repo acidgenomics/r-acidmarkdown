@@ -45,7 +45,7 @@ markdownList <-
             ## Add a trailing line break.
             text <- paste0(text, "\n")
             ## Specify that output should be handled as Markdown text.
-            text <- structure(text, format = "markdown")
+            text <- structure(text, format = "markdown") # nolint
             text <- knitr::asis_output(text)
             text
         }
