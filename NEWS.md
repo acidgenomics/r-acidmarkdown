@@ -1,5 +1,11 @@
 # Release notes
 
+## AcidMarkdown 0.3.1 (2025-03-24)
+
+Minor changes:
+
+- Relaxed R dependency from 4.3 to 4.0 for backwards compatibility.
+
 ## AcidMarkdown 0.3.0 (2023-10-04)
 
 Major changes:
