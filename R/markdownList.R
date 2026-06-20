@@ -16,9 +16,7 @@
 #' markdownList(groceries, ordered = TRUE)
 #' markdownList(groceries, asis = TRUE)
 markdownList <-
-    function(text,
-             ordered = FALSE,
-             asis = FALSE) {
+    function(text, ordered = FALSE, asis = FALSE) {
         text <- as.character(text)
         assert(
             isCharacter(text),

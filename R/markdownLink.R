@@ -18,9 +18,7 @@
 #'     title = "The R Project for Statistical Computing"
 #' )
 markdownLink <-
-    function(text,
-             url,
-             title = NULL) {
+    function(text, url, title = NULL) {
         assert(
             isString(text),
             isString(url),
