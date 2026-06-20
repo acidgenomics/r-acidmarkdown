@@ -1,8 +1,6 @@
 ## We're covering the code below in bcbioRNASeq and bcbioSingleCell.
 ## nocov start
 
-
-
 #' Prepare R Markdown template
 #'
 #' If the required template dependency files aren't present, copy them from the
@@ -59,8 +57,10 @@ prepareTemplate <- function(package = NULL, overwrite = FALSE) {
     if (!is.null(package)) {
         assert(isInstalled(package))
         sourceDir <- system.file(
-            "rmarkdown", "shared",
-            package = package, mustWork = TRUE
+            "rmarkdown",
+            "shared",
+            package = package,
+            mustWork = TRUE
         )
         copied <- copySharedFiles(sourceDir, overwrite = overwrite)
         files <- c(files, copied)
@@ -69,14 +69,14 @@ prepareTemplate <- function(package = NULL, overwrite = FALSE) {
     ## there are files in the desired package that are duplicated here, and
     ## which we don't necessarily want to overwrite by default.
     sourceDir <- system.file(
-        "rmarkdown", "shared",
-        package = utils::packageName(), mustWork = TRUE
+        "rmarkdown",
+        "shared",
+        package = utils::packageName(),
+        mustWork = TRUE
     )
     copied <- copySharedFiles(sourceDir, overwrite = overwrite)
     files <- c(files, copied)
     invisible(files)
 }
-
-
 
 ## nocov end

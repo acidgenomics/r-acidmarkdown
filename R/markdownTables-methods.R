@@ -35,12 +35,9 @@
 NULL
 
 
-
 ## Updated 2022-05-24.
 `markdownTables,list` <- # nolint
-    function(object,
-             captions = NULL,
-             force = FALSE) {
+    function(object, captions = NULL, force = FALSE) {
         assert(
             requireNamespace("knitr", quietly = TRUE),
             hasLength(object),
@@ -70,7 +67,6 @@ NULL
             object
         }
     }
-
 
 
 #' @rdname markdownTables
