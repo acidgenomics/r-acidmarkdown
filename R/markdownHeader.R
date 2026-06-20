@@ -22,10 +22,7 @@
 #' markdownHeader("Header", tabset = TRUE)
 #' markdownHeader("Header", asis = TRUE)
 markdownHeader <-
-    function(text,
-             level = 2L,
-             tabset = FALSE,
-             asis = FALSE) {
+    function(text, level = 2L, tabset = FALSE, asis = FALSE) {
         assert(
             isString(text),
             isHeaderLevel(level),
