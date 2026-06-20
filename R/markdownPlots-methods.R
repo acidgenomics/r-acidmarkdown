@@ -24,7 +24,6 @@
 NULL
 
 
-
 ## Updated 2022-05-24.
 `markdownPlots,list` <- # nolint
     function(object, headerLevel = 2L) {
@@ -44,7 +43,6 @@ NULL
             }
         ))
     }
-
 
 
 #' @rdname markdownPlots
